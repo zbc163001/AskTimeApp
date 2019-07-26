@@ -1,0 +1,27 @@
+module AskTimeApp{
+    //新增参数
+    struct sayInfo
+    {
+        0 require string  name;
+		1 optional int  age;
+		2 optional string address;
+		3 optional string phonenum;
+    };
+
+    //我新增的出参定义
+	struct greetInfo
+	{
+		0 require string greeting;
+		1 optional sayInfo feedBackInfo;
+        2 optional string time;
+	};
+
+interface Ask{
+
+    int Add(int a,int b,out int c); // Some example function
+    int Sub(int a,int b,out int c); // Some example function
+    //新增接口
+    int AskTime(sayInfo info, out greetInfo hiInfo);
+};
+
+};

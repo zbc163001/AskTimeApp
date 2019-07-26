@@ -1,0 +1,5 @@
+module AskTimeApp{
+    interface HttpServer{
+
+    };
+};
